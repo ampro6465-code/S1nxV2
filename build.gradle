@@ -1,0 +1,15 @@
+plugins { id 'java'; id 'maven-publish' }
+version = project.mod_version
+group = project.maven_group
+base { archivesName = project.archives_base_name }
+
+// Local compile-only stubs keep CI builds deterministic when Fabric's Maven is unreachable.
+// They are excluded from the runtime jar; Fabric/Minecraft provide these APIs in-game.
+sourceSets {
+    compileOnlyStubs
+    main { compileClasspath += compileOnlyStubs.output }
+}
+
+processResources { inputs.property 'version', project.version; filesMatching('fabric.mod.json') { expand 'version': project.version } }
+java { withSourcesJar(); sourceCompatibility = JavaVersion.VERSION_21; targetCompatibility = JavaVersion.VERSION_21 }
+tasks.withType(JavaCompile).configureEach { it.options.release = 21 }

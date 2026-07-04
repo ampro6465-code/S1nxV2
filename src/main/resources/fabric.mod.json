@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "s1nxv2",
+  "version": "${version}",
+  "name": "S1nxV2 Sandbox Utility",
+  "description": "Client-side sandbox/testing utilities for Minecraft 1.21.1 Fabric with movement tuning, render controls, macros, and an in-game guide.",
+  "authors": ["S1nxV2"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": { "client": ["com.s1nxv2.client.S1nxV2Client"] },
+  "depends": { "fabricloader": ">=0.16.0", "minecraft": "~1.21.1", "java": ">=21", "fabric-api": "*" }
+}
