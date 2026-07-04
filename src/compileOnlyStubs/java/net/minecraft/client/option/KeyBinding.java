@@ -1,0 +1,1 @@
+package net.minecraft.client.option; import net.minecraft.client.util.InputUtil; public class KeyBinding { public KeyBinding(String key, InputUtil.Type type, int code, String category){} public boolean wasPressed(){return false;} public boolean isPressed(){return false;} public void setPressed(boolean pressed){} }

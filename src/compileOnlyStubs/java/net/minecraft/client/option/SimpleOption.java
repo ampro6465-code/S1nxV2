@@ -1,0 +1,1 @@
+package net.minecraft.client.option; public class SimpleOption<T> { private T value; public SimpleOption(T value){this.value=value;} public T getValue(){return value;} public void setValue(T value){this.value=value;} }

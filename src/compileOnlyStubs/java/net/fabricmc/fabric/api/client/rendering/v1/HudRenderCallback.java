@@ -1,0 +1,1 @@
+package net.fabricmc.fabric.api.client.rendering.v1; import net.minecraft.client.gui.DrawContext; import net.minecraft.client.render.RenderTickCounter; public interface HudRenderCallback { Event EVENT = new Event(); void onHudRender(DrawContext context, RenderTickCounter tickCounter); final class Event { public void register(HudRenderCallback callback) {} } }
